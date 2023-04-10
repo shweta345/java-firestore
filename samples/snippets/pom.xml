@@ -91,7 +91,7 @@
             <configuration>
               <executable>java</executable>
               <arguments>
-                <argument>-classpath</argument>
+                <argumvnment>-classpath</argumvnment>
                 <classpath/>
                 <argument>com.example.firestore.Quickstart</argument>
                 <argument>${firestore.project.id}</argument>

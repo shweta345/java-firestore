@@ -167,6 +167,19 @@ public class Quickstart {
     // [END firestore_setup_dataset_read]
   }
 
+  void regionalEndpoint() throws Exception {
+
+    FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
+        .setHost("https://us-central2-test-firestore.sandbox.googleapis.com:443")
+        .setCredentials(GoogleCredentials.getApplicationDefault())
+        .build();
+
+    retrieveAllDocuments();
+    // Firestore firestoreOptions = firestoreOptions.getService();
+    System.out.println("Entered this loop");
+
+  }
+
   void run() throws Exception {
     String[] docNames = {"alovelace", "aturing", "cbabbage"};
 
@@ -189,8 +202,15 @@ public class Quickstart {
     // retrieve all users
     System.out.println("########## All users ##########");
     retrieveAllDocuments();
+    // System.out.println("###################################");
+
+    //regional ednpoint
+    System.out.println("########## Regional endpoint ##########");
+    regionalEndpoint();
     System.out.println("###################################");
+
   }
+
 
   /**
    * A quick start application to get started with Firestore.

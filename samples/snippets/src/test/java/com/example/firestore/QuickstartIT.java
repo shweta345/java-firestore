@@ -69,6 +69,12 @@ public class QuickstartIT extends BaseIntegrationTest {
     assertTrue(output.contains("alovelace"));
     assertTrue(output.contains("aturing"));
     assertTrue(output.contains("cbabbage"));
+
+    bout.reset();
+    quickstart.regionalEndpoint();
+    output = bout.toString();
+    // confirm that regional endpoint ran
+    // assertTrue(output.contains("Shweta"));
   }
 
   private void validate(DocumentReference docRef, Map<String, Object> data) throws Exception {
